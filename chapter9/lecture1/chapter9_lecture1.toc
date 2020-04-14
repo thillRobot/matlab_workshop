@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{Data Files}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{What is a Data File?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Why use Data Files? }{4}{0}{1}
+\beamer@sectionintoc {2}{File IO}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{What is File IO?}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{File Input in a Program}{6}{0}{2}
+\beamer@sectionintoc {3}{.csv Files}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Comma Separated Values}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{.csv and MS Excel}{8}{0}{3}
+\beamer@sectionintoc {4}{File Input in MATLAB}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{The fopen() Function}{9}{0}{4}
+\beamer@subsectionintoc {4}{2}{The fscanf() Function}{11}{0}{4}
+\beamer@subsectionintoc {4}{3}{The fclose() Function}{12}{0}{4}
+\beamer@subsectionintoc {4}{4}{A Simple Example}{13}{0}{4}
+\beamer@subsectionintoc {4}{5}{A More Complex Example}{14}{0}{4}

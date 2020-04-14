@@ -1,0 +1,225 @@
+% Lecture Template for ENGR 1120 030 031 E01- Tristan Hill - Spring 2017 - Summer 2018
+% 
+% Introduction to MATLAB 
+%
+% THe Command WIndow
+
+% Document settings
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{color,soul}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage{multicol}
+
+\pagestyle{plain}
+\setlength\parindent{0pt}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+\definecolor{mygreen}{rgb}{0, .39, 0}
+
+%\definecolor{dred}{#8B0000}
+% [153,50,204] - dark orchid
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+%[139,69,19] - saddle brown
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+
+\definecolor{mygray}{rgb}{.6, .6, .6}
+
+\setulcolor{red} 
+\setstcolor{green} 
+\sethlcolor{mygray} 
+
+\newcommand{\VA}{\vspace{2mm}}
+\newcommand{\VB}{\vspace{5mm}} 
+ 
+\newcommand{\R}{\color{red}}
+\newcommand{\B}{\color{blue}}
+\newcommand{\K}{\color{black}}
+\newcommand{\G}{\color{mygreen}}
+\newcommand{\PR}{\color{mypurple}}
+
+% assignment number 
+\newcommand{\NUM}{1 } 
+\newcommand{\VSpaceSize}{2mm} 
+\newcommand{\HSpaceSize}{2mm} 
+
+\begin{document}
+
+\textbf{ \LARGE ENGR 1120 Lecture Chapter \NUM \\\\- More Numerical Expressions} \\
+\Large
+\begin{itemize}
+
+	\item \textbf{ \LARGE Useful Commands( type in Command Window)}\\
+
+		
+		\scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} >>  clear variables}} \\
+
+		
+		\scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} >>  clc}} \\\\
+
+	\item \textbf{ \LARGE 1.3 - Variables and Assignment} \\
+		\Large
+		\begin{itemize}
+			\item \Large{A variable is a container for storing values in the RAM. The value that is stored has a {\it type} (1.3.3). We will begin with {\it floating point} values.} \vspace{50mm}
+			
+		\scalebox{2}{$variable = expression$}	\vspace{50mm}
+
+		
+		\newpage
+			\item \LARGE{Basic Use of a \PR{\bf Variable}} \\
+				\begin{itemize}
+					
+					\item {\bf Assign} a Value  \vspace{35mm}
+
+					\item {\bf Access} the Value  \vspace{35mm}
+
+					\item {\bf Re-Assign} a Value \vspace{35mm}
+					
+					\item Common Errors \vspace{35mm}
+				
+
+				\end{itemize}
+
+
+		\end{itemize}
+	\newpage
+	\item \textbf{ \LARGE 1.4 - Numerical Expressions}
+		\begin{itemize}
+			\item \Large{We will begin with numerical expressions. This is how we do typical math computations in MATLAB.} \vspace{10mm}
+
+			\item To do this we need to learn about {\it operator precedence}. \\
+
+				%\begin{multicols}{2}				
+
+				\scalebox{2}{$(\hspace{3mm} )$} \hspace{15mm}\Large{Parenthesis} \\\\
+
+				\scalebox{2}{$\wedge$} \hspace{15mm}\Large{Exponents} \\\\
+
+				\scalebox{2}{$-$} \hspace{15mm}\Large{Negation} \\\\
+
+				\scalebox{2}{$*\hspace{3mm} /$} \hspace{15mm}\Large{Multiplication and Division}\\\\				
+	
+				 \scalebox{2}{$+\hspace{3mm} -$} \hspace{15mm}\Large{Addition and Subtraction}\\\\
+				
+				%\end{multicols}	
+		
+				
+		\end{itemize}
+
+\newpage
+	\item \textbf{ \LARGE 1.4.3 -  Built-In MATLAB functions}\\\\
+	 \includegraphics[scale=.15]{lecture2_fig1.png} \hspace{35mm}\includegraphics[scale=.30]{lecture2_fig2.png}\\\\  
+		
+		\begin{itemize}
+			\item \textbf{\Large What is a function?} \vspace{60mm}
+			\item \textbf{\Large How do we use a function?} \\\\
+			 \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{1mm} >> [y1,y2,...,ym]=fun(x1,x2,...,xn) }} \vspace{100mm}
+			\item \textbf{\Large Typical Mathematics Functions} \\	
+				\begin{itemize}
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} sqrt()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} exp()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} log()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} log2()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} log10()}} \\
+				\end{itemize}	
+				\item \textbf{\Large Other Useful Functions} \\	
+				\begin{itemize}
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} round()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} floor()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} int8()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} sign()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} mod()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} rem()}} \\
+	
+				\end{itemize}	
+			\item \textbf{\Large The Built in Help }\\	
+				\begin{itemize}
+					\item \LARGE{use the help to get information about the built in functions } \\\\
+					\item \scalebox{1}{{\fontfamily{qcr}\selectfont  \hspace{5mm} >> help sqrt()}} \\
+	
+				\end{itemize}	
+				\newpage
+
+
+	
+		\end{itemize}
+
+
+
+
+
+
+	\newpage
+	\item \textbf{ \LARGE 1.4.4 - Constants} \\
+		\begin{itemize}
+			\item \LARGE{Several useful constants are built into MATLAB.} \\
+
+				\begin{itemize}
+					
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} pi}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} i}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} j}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} inf}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} NaN}} \\\\
+
+				\end{itemize}
+
+
+
+		\end{itemize}
+
+	
+
+\item \textbf{ \LARGE 1.4.5 - Random Numbers} \\
+		\begin{itemize}
+			\item \LARGE{Sometime it is useful generate random data in MATLAB.} \\
+
+				\begin{itemize}
+					
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} rand()}} \\
+					\item \scalebox{1.5}{{\fontfamily{qcr}\selectfont  \hspace{5mm} randi()}} \\\\\\
+		
+				\end{itemize}
+
+
+
+		\end{itemize}
+\item \textbf{ \LARGE 1.5 and 1.6 - We will cover after we cover chapter 2} \\
+		\newpage
+\item \textbf{ \LARGE Let us solve an example like the lab} \\
+\newpage
+\item \textbf{ \LARGE example } \\
+\end{itemize}
+
+
+	
+
+\end{document}
+
+
+

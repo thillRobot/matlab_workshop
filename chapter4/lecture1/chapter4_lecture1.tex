@@ -1,0 +1,202 @@
+% Lecture Template for ENGR 1120 030 031 E01- Tristan Hill - Spring 2017 - Spring 2018
+% 
+% Introduction to MATLAB 
+%
+% Intro to Logical and Branching
+
+% Document settings
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{color,soul}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage{multicol}
+\usepackage{array}
+
+\pagestyle{plain}
+\setlength\parindent{0pt}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+% assignment number 
+\newcommand{\NUM}{4 } 
+\newcommand{\VSpaceSize}{2mm} 
+\newcommand{\HSpaceSize}{2mm} 
+
+\definecolor{mygray}{rgb}{.6, .6, .6}
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+\definecolor{mygreen}{rgb}{0, .39, 0}
+
+\newcommand{\R}{\color{red}}
+\newcommand{\B}{\color{blue}}
+\newcommand{\BR}{\color{mybrown}}
+\newcommand{\K}{\color{black}}
+\newcommand{\G}{\color{mygreen}}
+\newcommand{\PR}{\color{mypurple}}
+
+\setulcolor{red} 
+\setstcolor{green} 
+\sethlcolor{mygray} 
+
+\begin{document}
+
+\textbf{ \LARGE ENGR 1120 Lecture Chapter \NUM - Selection Statements\\\\ Introduction to Logic} \\
+	
+\includegraphics[scale=0.3]{lecture1_fig1.png}\\\\
+
+\Large
+\begin{itemize}
+
+
+	
+	\item \textbf{ \LARGE What is \color{mypurple}Logic \color{black}? We need to learn some new vocab.}\\
+	
+		
+		\begin{itemize}
+			
+			\item \textbf{\Large Types of Sentences (or expressions)}  
+				\begin{itemize}
+					\item Declarative \\
+					\item Exclamatory\\
+					\item Interogative\\
+					\item Imperative\\
+				\end{itemize}
+			\item \textbf{ \Large What is a  \color{mypurple}Logical Expession \color{black}?} \\  \vspace{30mm}
+            			
+            		\item \textbf{ \Large a  \color{mypurple} Logical Expession \color{black}  is evaluated as ...} 
+		\end{itemize}
+\newpage
+
+	\item \textbf{ \LARGE \color{mypurple}Logical Statments \color{black} are used for making {\it decisions}}\\
+		\begin{itemize}
+					\item This may be called {\it branching} or \color{blue} Selection \color{black} in programming \\
+					\item Previously our programs were all {\it just a straight line}\\
+					\item Solving advanced problems requires more complex \color{mybrown} Program Flow\color{black} \\
+
+				\end{itemize}
+				\newpage
+				
+					\item \textbf{ \LARGE \color{blue}Relational Operators \color{black} and \color{mypurple}Logical Expressions \color{black}}\\\\
+		\begin{itemize}
+					\item {\bf{\B Relational Operators}} combine {\bf{\G numerical expressions}} to make {\bf{\PR Logical Expressions }}.\vspace{20mm}\\
+					\item The general form of a {\bf{\PR Logical Expression}} is shown below. \vspace{20mm}\\
+
+						 \scalebox{1.1}{{\fontfamily{qcr}\selectfont Numerical  \hspace{7mm}Relational  \hspace{7mm}Numerical }} \\
+						\scalebox{1.1}{{\fontfamily{qcr}\selectfont Expression \hspace{5mm} Operator \hspace{5mm} Expression }} \\\\
+			
+				\end{itemize}
+				\newpage
+				
+					\item \textbf{ \LARGE \color{blue}if \color{black} Statments are used for making {\it decisions}.}\\
+		\begin{itemize}
+					\item \color{blue}if \color{black} is a reserved \color{mypurple} keyword \color{black}. You cannot use it for anything else. \\
+					\item \color{blue}end \color{black} is a also a reserved \color{mypurple} keyword \color{black}. \\\\\\
+					\item The general form of an \color{blue}If \color{black} statment is shown below. \vspace{20mm}\\ \\
+
+						 \scalebox{1.1}{{\fontfamily{qcr}\selectfont  if (condition) }} \\\\
+						 \scalebox{1.1}{{\fontfamily{qcr}\selectfont  \hspace{10mm}code }} \\\\
+						 \scalebox{1.1}{{\fontfamily{qcr}\selectfont  end }} \\
+				\end{itemize}
+				\newpage
+					\item \textbf{ {\BR Compound Logical Expressions} and {\G Logical Operators}} \\
+			\begin{itemize}
+				\item Logical Expressions can be combined to make Compound Logical Expressions\\\\
+				
+				\item This is done using {\bf{\G Logical Operators}}\\\\
+
+				\item you are familiar with this idea...\\\\
+				
+				
+					\LARGE
+					\begin{center}
+					\begin{tabular}{|| m{4cm} | m{5cm}| m{2.5cm} |m{3cm} || } \hline
+						 {\bf English} &{\bf Comp. Science} & {\bf Symbol} & {\bf MATLAB} \\ \hline \hline
+ 						 &  &  & \\   
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\\hline
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\\hline
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\
+ 						 &  &  & \\ \hline
+ 						   
+					\end{tabular}
+					\end{center}
+
+
+			
+			\end{itemize}
+				\newpage
+	
+				
+					\item \textbf{We can represent this idea in a {\B Truth Table}}.\\
+				
+				\LARGE
+					\begin{center}
+					\begin{tabular}{|| m{2.75cm} | m{2.75cm}| m{2.75cm} |m{2.75cm}|m{2.75cm}|| } \hline
+					 	 &  & &  &   \\
+ 						 &  & &  &   \\\hline\hline
+ 						 &  & &  &   \\
+ 						 &  & &  &   \\\hline
+ 						 &  & &  &   \\
+ 						 &  & &  &   \\\hline
+ 						 &  & &  &   \\
+ 						 &  & &  &   \\\hline
+ 						 &  & &  &   \\
+ 						 &  & &  &   \\\hline
+ 						 &  & &  &   \\
+ 						 &  & &  &   \\\hline
+ 						 &  & &  &   \\
+ 						 &  & &  &   \\\hline
+ 						 &  &  &  &   \\
+ 						 &  &  &  &   \\\hline
+ 						 &  &  &  &   \\
+ 						 &  &  &  &   \\\hline
+ 						   
+					\end{tabular}
+					\end{center}
+
+				\newpage
+	
+				
+					\item \textbf{We often represent the \color{mybrown} Program Flow \color{black} in a \color{mypurple} Flowchart\color{black} }\\
+\end{itemize}
+
+
+	
+
+\end{document}
+
+
+

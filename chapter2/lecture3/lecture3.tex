@@ -1,0 +1,163 @@
+% Lecture Template for ENGR 1120 030 031 E01- Tristan Hill - Spring 2017
+% 
+% Introduction to MATLAB 
+%
+% Using 1D arrays 
+% Using the Plot Function
+
+% Document settings
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{color,soul}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage{multicol}
+
+\pagestyle{plain}
+\setlength\parindent{0pt}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+% assignment number 
+\newcommand{\NUM}{2 } 
+\newcommand{\VSpaceSize}{2mm} 
+\newcommand{\HSpaceSize}{2mm} 
+
+\definecolor{mygray}{rgb}{.6, .6, .6}
+
+% [153,50,204] - dark orchid
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+%[139,69,19] - saddle brown
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+
+\setulcolor{red} 
+\setstcolor{green} 
+\sethlcolor{mygray} 
+
+\newcommand{\VA}{\vspace{2mm}}
+\newcommand{\VB}{\vspace{5mm}} 
+ 
+\newcommand{\R}{\color{red}}
+\newcommand{\B}{\color{blue}}
+\newcommand{\K}{\color{black}}
+\newcommand{\GR}{\color{mygreen}}
+\newcommand{\PR}{\color{mypurple}}
+
+
+\begin{document}
+
+\textbf{ \LARGE ENGR 1120 Lecture Chapter \NUM - \\\\ More about 1D Matrices} \\
+
+\begin{itemize}
+
+		\item \textbf{ \LARGE We need to remember to clear the workspace ...}\\\\
+\begin{itemize}
+
+		 	 
+		 \item \textbf{ \LARGE Consider the follow scenario...}\\\\
+		\scalebox{1.75}{{\fontfamily{qcr}\selectfont  >> clear {\PR variables}}} \\\\
+		
+		\scalebox{1.75}{{\fontfamily{qcr}\selectfont  >> X=[5 10 15 20 25 30 35 40 45 50]}} \\\\
+
+		 \item \textbf{ \LARGE If I use `X' again without clearing the data... }\\\\
+		 
+		 \scalebox{1.75}{{\fontfamily{qcr}\selectfont  >> X=[3 6 9 12 15]}} \\\\
+		 
+		 \item \textbf{ \LARGE What do you think will happen?}\\\\
+\end{itemize}
+\newpage
+		\item \textbf{ \LARGE Other weird things can happen as well...}\\\\
+\begin{itemize}
+
+		 	 
+		 \item \textbf{ \LARGE Consider this scenario...}\\\\
+		\scalebox{1.75}{{\fontfamily{qcr}\selectfont  >> clear {\PR variables}}} \\\\
+		
+		\scalebox{1.75}{{\fontfamily{qcr}\selectfont  >> X=[2 4 6 8]}} \\\\
+		 
+		 \scalebox{1.75}{{\fontfamily{qcr}\selectfont  >> X(6)=99}} \\\\
+		 
+		 \item \textbf{ \LARGE What do you think will happen?}\\\\
+\end{itemize}
+\newpage
+		\item \textbf{ \LARGE the \color{mypurple}Colon Operator :\color{black}}\\
+	
+		\Large
+		\begin{itemize}
+			\item \textbf{ used with sequential arrays that are {\it ranges}} \\\\ i.e. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] or [0.1, 0.2, 0.3, 0.4, 0.5] \vspace{25mm} 
+			
+			\item \textbf{ \Large used for Initialization of a range} \\  \vspace{25mm}
+			
+			\item \textbf{ \Large Slicing} \\  \vspace{15mm}
+		\end{itemize}
+
+\newpage
+		\item \textbf{ \LARGE Array  \color{mypurple}Concatenation \color{black} }\\
+	
+		\Large
+		\begin{itemize}
+			
+			\item \textbf{ \Large this is a special use of the \color{mypurple}[ ] \color{black} and {\it initialization}} \\  \vspace{25mm}
+			
+			\item \textbf{ \Large create arrays from other arrays} \\  \vspace{15mm}
+		\end{itemize}
+
+\newpage		
+\item \textbf{ \LARGE {\PR Scalar} Operations:}\\
+	
+	All of the math we have done so far has been {\it Scalar Arithmetic}. This means that each operand was a Scalar (1x1) and each numerical expression was evaluated as a Scalar (1x1). \\
+	
+	 \scalebox{1.3}{{\fontfamily{qcr}\selectfont  x=10*2\hspace{20mm}\color{blue}--> 20}} \\\\
+	  \scalebox{1.3}{{\fontfamily{qcr}\selectfont  y=x*5\hspace{20mm}\color{blue}--> 100}} \\
+	  
+	  \scalebox{1.3}{{\fontfamily{qcr}\selectfont  A=[10, 15, 12, 13]}} \\\\
+	  \scalebox{1.3}{{\fontfamily{qcr}\selectfont  p=A(1)*A(3)\hspace{20mm}\color{blue}--> 120}} \\
+		
+	
+	\item \textbf{ \LARGE {\PR Element-Wise} Operations:}\\
+	
+	It is often useful to operate on an entire array at once. These operate on the array operands one element at time and generate a array that is the same size and shape as the array operand.
+	\begin{itemize}
+		\item Element Wise Multiply \scalebox{1.8}{{\fontfamily{qcr}\selectfont  .*}} \\
+		\item Element Wise Divide \scalebox{1.8}{{\fontfamily{qcr}\selectfont  ./}} \\
+		\item Element Wise Power \scalebox{1.8}{{\fontfamily{qcr}\selectfont  .\^{}}} \\
+		
+			\scalebox{1.3}{{\fontfamily{qcr}\selectfont  A=[10, 15, 12, 13]}} \\\\
+			\scalebox{1.3}{{\fontfamily{qcr}\selectfont  B=[1, 5, 2, 3]}} \\\\
+			\scalebox{1.3}{{\fontfamily{qcr}\selectfont  C=A.*B\hspace{20mm}\color{blue}--> 10,    75,    24,    39}} \\\\
+			\scalebox{1.3}{{\fontfamily{qcr}\selectfont  C=A./B\hspace{20mm}\color{blue}-->10.0,    3.0,    6.0,  4.3}} \\\\
+			\scalebox{1.3}{{\fontfamily{qcr}\selectfont  C=A.\^{}B\hspace{20mm}\color{blue}--> 10, 759375, 144      , 2197}} 
+	\end{itemize}
+		
+\end{itemize}
+
+
+	
+
+\end{document}
+
+
+

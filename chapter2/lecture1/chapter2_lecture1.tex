@@ -1,0 +1,216 @@
+% Lecture Template for ENGR 1120 030 031 E01- Tristan Hill - Spring 2017 - Spring 2018
+% 
+% Introduction to MATLAB 
+%
+% THe Command WIndow, more IO
+% input and fprintf
+
+% Document settings
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{color,soul}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage{multicol}
+
+\pagestyle{plain}
+\setlength\parindent{0pt}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+% assignment number 
+\newcommand{\NUM}{2 } 
+\newcommand{\VSpaceSize}{2mm} 
+\newcommand{\HSpaceSize}{2mm} 
+
+\definecolor{mygreen}{rgb}{0, .39, 0}
+
+%\definecolor{dred}{#8B0000}
+% [153,50,204] - dark orchid
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+%[139,69,19] - saddle brown
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+
+\definecolor{mygray}{rgb}{.6, .6, .6}
+
+\setulcolor{red} 
+\setstcolor{green} 
+\sethlcolor{mygray} 
+
+\newcommand{\VA}{\vspace{2mm}}
+\newcommand{\VB}{\vspace{5mm}} 
+ 
+\newcommand{\R}{\color{red}}
+\newcommand{\B}{\color{blue}}
+\newcommand{\K}{\color{black}}
+\newcommand{\GR}{\color{mygreen}}
+\newcommand{\PR}{\color{mypurple}}
+
+\begin{document}
+
+\textbf{ \LARGE ENGR 1120 Lecture Chapter \NUM - \\\\ Vectors and Matrices} \\
+
+\begin{itemize}
+
+	\item \textbf{ \LARGE MATLAB is the {\B Matrix Laboratory}}\\
+		\Large
+		\begin{itemize}
+			\item \textbf{previously we have been using {\PR scalars} }  \\ \vspace{30mm}
+			\item \textbf{the default data type is a double precision {\GR matrix}} \\ \vspace{30mm}
+			\item \textbf{a matrix is a container (variable) for storing multiple values under the same name}  \\ \vspace{30mm}
+				
+			\item \textbf{we will begin with {\B 1 - Dimensional} matrices.\\aka - {\PR array} or {\GR vector}}\\  \vspace{30mm}
+				
+		
+		\end{itemize}
+	\large	
+	\item \textbf{ \LARGE Elements and Indicies}\\
+		
+		\begin{tabular}{|lccccc|} \hline
+        \textbf{ Name:}\hspace{2 mm} Squares&&&&&\\ \hline\hline
+        \end{tabular}
+        
+        \begin{tabular}{|lccccc|} \hline
+        \textbf{ Index:}\hspace{2 mm}&1&2&3&4&5 \\ \hline
+        \textbf{ Value:}\hspace{4 mm}&14.0&9.0&16.0&25.0&36\\ \hline
+        \end{tabular}\hspace{5mm} Example: 1-D matrix named {\GR squares}
+        \vspace{30 mm} \\
+        
+        
+        \large	
+	\item \textbf{ \LARGE The Memory Bank}\\
+        
+        \begin{multicols}{2}			
+        \begin{tabular}{ | l | c | r | }
+            \hline
+             \textbf{Name} & \textbf{Memory Address} & \textbf{Value} \\ \hline\hline\hline
+            x & 6  & 1.0 \\ \hline\hline\hline
+            y & 7 & 99.5 \\ \hline\hline\hline
+            z & 8 & 12.7 \\ \hline\hline\hline
+            length & 9 & 0.1 \\ \hline\hline\hline
+            width & A & 0.3 \\ \hline\hline\hline
+            height & B & 0.1 \\ \hline\hline\hline
+            grav & C & 9.8 \\ \hline\hline\hline
+            -- & D & -- \\ \hline\hline\hline
+            -- & E & -- \\ \hline\hline\hline
+            -- & F & -- \\ \hline\hline\hline
+            -- & 10 & -- \\ \hline	
+        \end{tabular}
+	
+    \vspace{2mm}
+        This Memory Bank contains 7 variables.\\ Each is a scalar.
+            
+        \begin{tabular}{ | l | c | r | }
+            \hline
+            \textbf{Name} & \textbf{Memory Address} & \textbf{Value} \\ \hline \hline \hline
+            a & 11  & 4.3 \\ \hline\hline\hline
+            b & 12 & 9.0 \\ \hline\hline\hline
+            squares & 13 & 4.0 \\\hline
+            -- & 14 & 9.0 \\ \hline
+            -- & 15 & 16.0 \\ \hline
+            -- & 16 & 25.0 \\ \hline
+            -- & 17 & 36.0 \\ \hline\hline\hline
+            sum & 18 & 90.0  \\ \hline\hline\hline
+            avg & 19 & 18.0 \\ \hline\hline\hline
+            -- & 1A & -- \\ \hline\hline\hline
+	 -- & 1B & -- \\ \hline\hline\hline
+            -- & 1C & -- \\ \hline
+                
+        \end{tabular}	 
+	
+	\vspace{2mm}
+        This one contains a 1-D matrix called {\GR squares} and 4 scalars.
+        \end{multicols}
+		
+		\newpage
+	\item \textbf{ \LARGE using {\PR 1D matrices} in MATLAB }\\
+	
+		
+		\begin{itemize}
+			\item \textbf{ \Large Initialization of an Array } \\  \vspace{30mm}
+            			
+            		\item \textbf{ \Large Accessing } \\  \vspace{30mm}	
+            				
+            		\item \textbf{ \Large Assignment } \\  \vspace{30mm}			
+            				
+			\item \textbf{ \Large Re-Assignment , aka Overwrite} \\  \vspace{30mm}			
+
+		\end{itemize}
+
+		\newpage
+	\item \textbf{ \LARGE compared to {\B scalars} in MATLAB  }\\
+	
+		
+		\begin{itemize}
+			\item \textbf{ \Large Initilization of an Array } \\  \vspace{30mm}
+            			
+            		\item \textbf{ \Large Accessing } \\  \vspace{30mm}	
+            				
+            		\item \textbf{ \Large Assignment } \\  \vspace{30mm}			
+            				
+			\item \textbf{ \Large Re-Assignment , aka Overwrite} \\  \vspace{30mm}			
+
+		\end{itemize}
+		
+		\newpage
+		\item \textbf{ \LARGE some important vocab  }\\
+	
+		
+		\begin{itemize}
+			\item \textbf{ \Large \color{blue} elements \color{black} of an \color{mypurple}Array } \\  \vspace{30mm}
+            			
+            		\item \textbf{ \Large \color{blue}  index \color{black} of an \color{mypurple} element } \\  \vspace{30mm}
+            				
+            		\item \textbf{ \Large \color{blue} size \color{black} of an \color{mypurple} array} \\  \vspace{30mm}			
+            				
+			\item \textbf{ \Large \color{blue} shape \color{black} of an \color{mypurple} array} \\  \vspace{30mm}		
+
+		\end{itemize}
+
+			\newpage
+		\item \textbf{ \LARGE some useful functions for 1D arrays}\\
+	
+		
+		\begin{itemize}
+			\item \textbf{ \Large \color{black} length()} \\  \vspace{15mm}
+            		\item \textbf{ \Large \color{black} size()} \\  \vspace{15mm}
+            		\item \textbf{ \Large \color{black} sum()} \\  \vspace{15mm}
+            		\item \textbf{ \Large \color{black} min()} \\  \vspace{15mm}	
+            		\item \textbf{ \Large \color{black} max()} \\  \vspace{15mm}
+            		\item \textbf{ \Large \color{black} plot()} \\  \vspace{15mm}		
+            		\item \textbf{ \Large \color{black} and many more...} \\  \vspace{15mm}	
+		\end{itemize}
+
+
+\end{itemize}
+
+
+	
+
+\end{document}
+
+
+

@@ -1,0 +1,173 @@
+% Lecture Template for ENGR 1120 030 031 E01- Tristan Hill - Spring 2017 - Fall 2017
+% 
+% Introduction to MATLAB 
+%
+% THe Command WIndow, more IO
+% input and fprintf
+
+% Document settings
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{color,soul}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage{multicol}
+
+\pagestyle{plain}
+\setlength\parindent{0pt}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+% assignment number 
+\newcommand{\NUM}{1 } 
+\newcommand{\VSpaceSize}{2mm} 
+\newcommand{\HSpaceSize}{2mm} 
+
+\definecolor{mygray}{rgb}{.6, .6, .6}
+
+% [153,50,204] - dark orchid
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+%[139,69,19] - saddle brown
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+
+\setulcolor{red} 
+\setstcolor{green} 
+\sethlcolor{mygray} 
+
+\begin{document}
+
+\textbf{ \LARGE ENGR 1120 Lecture Chapter \NUM - \\\\ Command Window Input and Output} \\
+
+\begin{itemize}
+
+	\item \textbf{ \LARGE basic command window output ;}\\
+		\Large
+		\begin{itemize}
+			\item by default each line of code (expression or assignment) will print to the C.W. \\ \vspace{20mm}
+			\item however the {\it semicolon} is used to {\it suppress} the output\\ 
+			\item {\bf example:} \\
+			
+				\scalebox{1.5}{{\fontfamily{qcr}\selectfont  >>x=10;}} \\\\
+				
+			\item the default output can be configured using the format command\\
+		
+				 \scalebox{1.5}{{\fontfamily{qcr}\selectfont  >>format compact}} \\\\
+				 \scalebox{1.5}{{\fontfamily{qcr}\selectfont  >>format long}} \\\\
+				 \scalebox{1.5}{{\fontfamily{qcr}\selectfont  >>format loose}} \\\\
+				 \scalebox{1.5}{{\fontfamily{qcr}\selectfont  >>format short}} \\\\
+					
+			note: I will not be using the {\it format} command, you can look into if you wish\\		
+		\end{itemize}
+		
+		\newpage
+	\item \textbf{ \LARGE 2 new useful functions}\\
+	
+		
+		\begin{itemize}
+		
+		       \item \textbf{ \Large the \LARGE{\it fprintf()} \Large function} \\
+            	\Large
+            	\begin{itemize}
+            		\item similar to the C library function \\
+            		\item complete control of the {\it command window output}	\\
+            		\item also used with {\it file output}, {\bf f}ormatted {\bf print} to {\bf f}ile 	\\
+            		\item results in a formatted {\it string}, character level control \\
+            		
+            		\item {\bf example:} \\\\
+            						
+            						The lines below goes in your code.  \vspace{10mm} \\			
+            						\scalebox{1.5}{{\fontfamily{qcr}\selectfont my\textunderscore var=97.563;}} \\\\	
+            						\scalebox{1.5}{{\fontfamily{qcr}\selectfont fprintf(\color{mypurple}`The value is \%f '\color{black},my\textunderscore var) }} \vspace{5mm} \\	
+            						
+            						The following output will appear in the command window.  \vspace{10mm} \\	
+            						
+            						\scalebox{1.5}{{\fontfamily{qcr}\selectfont >>The value is 97.563  }} \vspace{5mm} \\
+            				
+            						Can you tell what happened?  \vspace{10mm} \\	
+            						
+            	\end{itemize}
+            	\newpage
+            	\item \textbf{ \Large more about the \LARGE{\it fprintf()} \Large function} \vspace{10mm} \\
+            	\scalebox{1.5}{{\fontfamily{qcr}\selectfont \color{mypurple}`\color{red}\% \color{blue}{\it feild width} \color{black}. \color{green}{\it precision} \color{mybrown}f \color{mypurple}' }} \vspace{5mm} \\
+            \vspace{5mm}
+            		\LARGE
+			\begin{itemize}
+				\item {\it Data Type} of the value \vspace{40mm} \\
+				\item {\it Field Width} \vspace{40mm} \\
+				\item {\it Precision}\vspace{40mm} \\
+			\end{itemize}
+	
+		
+		\newpage
+		\item \textbf{ \Large escape sequences and the \LARGE{\it fprintf()} \Large function} \vspace{10mm} \\	
+			\begin{itemize}
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash a}} \color{black}\\\\	
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash b}} \color{black}\\\\	
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash n}} \color{black}\\\\	
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash r}} \color{black}\\\\	
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash t}} \color{black}\\\\	
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash \textbackslash}} \color{black}\\\\	
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash `}} \color{black}\\\\
+				\item\hspace{15mm} \color{mypurple}\scalebox{1.5}{{\fontfamily{qcr}\selectfont \textbackslash ''}} \color{black}\\\\			
+			\end{itemize}
+			
+			\newpage
+			
+			\item \textbf{ \Large the \LARGE{\it input()} \Large function} 
+            			\Large
+            				\begin{itemize}
+            					\item adds a simple user interface to your program \\
+            					\item you type {\it command window input} \\
+            					\item the input can be stored as a variable	\\
+            					\item {\bf example:} \\\\
+            						The line below goes in your code,\\\\
+            						\scalebox{1.5}{{\fontfamily{qcr}\selectfont  x=input(\color{mypurple}`Please type A number '\color{black}) }} \\
+            						
+            						and then the text will appear in the command window. \\\\
+            						\scalebox{1.5}{{\fontfamily{qcr}\selectfont  >>Please type A number\color{black} }} \\
+            						
+            						Now the user  can type a value (shown in red below) followed by the {\it Enter} key. \\\\	
+            						
+            						\scalebox{1.5}{{\fontfamily{qcr}\selectfont  >>Please type A number\color{red} \hspace{2MM}42.7}} \\\\
+            						
+            						Now you can see the value 42.7 is stored in the variable x.
+            				\end{itemize}
+            				
+            			
+
+		\end{itemize}
+
+
+
+\end{itemize}
+
+
+	
+
+\end{document}
+
+
+
