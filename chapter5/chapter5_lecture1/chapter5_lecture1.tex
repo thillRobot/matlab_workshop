@@ -1,50 +1,32 @@
-% Lecture Template for ENGR 1120 030 031 E01- Tristan Hill - Spring 2017m - Fall 2017
-% 
-% Introduction to MATLAB 
-%
-% Intro to Looping and Repetition
+% Lecture Template for ENGR1120-800 Tristan Hill - Spring 2020
+% Dynamics Modeling and Controls
+% Chapter 5 - Loops
+
+% I am finally converting my stuff to BEAMER
 
 % Document settings
-\documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage[pdftex]{graphicx}
-\usepackage{multirow}
-\usepackage{setspace}
-\usepackage{hyperref}
-\usepackage{color,soul}
-\usepackage{fancyvrb}
-\usepackage{framed}
-\usepackage{wasysym}
+
+%\documentclass{beamer}                  % for presentation ?
+\documentclass[handout]{beamer}  % for handout ?
+\usepackage{beamerthemesplit}
+\usepackage{amsmath}
+\usepackage{listings}
 \usepackage{multicol}
+\usepackage{framed}
 
-\pagestyle{plain}
-\setlength\parindent{0pt}
-\hypersetup{
-    bookmarks=true,         % show bookmarks bar?
-    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
-    pdftoolbar=true,        % show Acrobat’s toolbar?
-    pdfmenubar=true,        % show Acrobat’s menu?
-    pdffitwindow=false,     % window fit to page when opened
-    pdfstartview={FitH},    % fits the width of the page to the window
-    pdftitle={My title},    % title
-    pdfauthor={Author},     % author
-    pdfsubject={Subject},   % subject of the document
-    pdfcreator={Creator},   % creator of the document
-    pdfproducer={Producer}, % producer of the document
-    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
-    pdfnewwindow=true,      % links in new window
-    colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
-    citecolor=green,        % color of links to bibliography
-    filecolor=magenta,      % color of file links
-    urlcolor=blue           % color of external links
-}
+\beamertemplateballitem
 
-% assignment number 
-\newcommand{\NUM}{5 } 
-\newcommand{\VSpaceSize}{2mm} 
-\newcommand{\HSpaceSize}{2mm} 
+\definecolor{TTUpurple}{rgb}{0.3098, 0.1607, 0.5176} % TTU Purple (primary)
+\definecolor{TTUgold}{rgb}{1.0000, 0.8666, 0.0000} % TTU Gold (primary)
 
+\setbeamercolor{palette primary}{bg=TTUpurple,fg=TTUgold}
+\setbeamercolor{palette secondary}{bg=black,fg=TTUgold}
+\setbeamercolor{palette tertiary}{bg=black,fg=TTUpurple}
+\setbeamercolor{palette quaternary}{bg=TTUgold,fg=black}
+\setbeamercolor{structure}{fg=TTUpurple} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=TTUpurple} % TOC sections
+
+%\usefonttheme{professionalfonts}
 \definecolor{mygray}{rgb}{.6, .6, .6}
 
 % [153,50,204] - dark orchid
@@ -52,110 +34,201 @@
 %[139,69,19] - saddle brown
 \definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
 \definecolor{mygreen}{rgb}{0,.4,0}
-
-
-\setulcolor{red} 
-\setstcolor{green} 
-\sethlcolor{mygray} 
+\definecolor{mygray}{rgb}{.6, .6, .6}
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+\definecolor{mygreen}{rgb}{0, .39, 0}
 
 \newcommand{\R}{\color{red}}
 \newcommand{\B}{\color{blue}}
-\newcommand{\K}{\color{black}}
-\newcommand{\GR}{\color{mygreen}}
-\newcommand{\PR}{\color{mypurple}}
 \newcommand{\BR}{\color{mybrown}}
+\newcommand{\K}{\color{black}}
+\newcommand{\G}{\color{mygreen}}
+\newcommand{\PR}{\color{mypurple}}
 
+
+\newcommand{\CNUM}{5\hspace{2mm}} % Chapter Number 
+\newcommand{\LNUM}{1\hspace{2mm}} % Lecture Number 
+
+\newcommand{\vspcc}{\vspace{6mm}\\ } 
+\newcommand{\vspc}{\vspace{2mm}\\ } 
+\newcommand{\hspc}{\hspace{5mm} } 
+
+\newcommand{\Lagr}{\mathcal{L}} % lagrangian
+
+\newcommand{\secondtitle}{Using Loop Statements}% second line of the title of this presentation , aka the topic of this lecture
+
+\title{Chapter \CNUM - Lecture \LNUM}
+\author{ENGR1120 - 800 - Honors Programming for Engineers} % original formatting from Mike Renfro, September 21, 2004
+
+\date{April 14, 2020}
 
 \begin{document}
 
-\textbf{ \LARGE ENGR 1120 Lecture Chapter \NUM - Looping Statements } \\
-	
-%\includegraphics[scale=0.3]{lecture1_fig1.png}\\\\
+\lstset{language=MATLAB,basicstyle=\ttfamily\large,showstringspaces=false}
 
-\Large
-\begin{itemize}
+% Title page1 
+\frame{\titlepage \center\textbf{\secondtitle}\vspcc}
 
 
+% Section 0: Outline
+\frame{
+
+\large \textbf{Lecture \LNUM - \secondtitle} \vspc
+
+ \begin{itemize}
+
 	
-	\item \textbf{ \LARGE What is \color{mypurple}Looping \color{black}? Why \color{mypurple}Loop\color{black} ?}\\
+	\item What is Looping? \vspcc  % Section 1
+
+	\item Types of Loops \vspcc % Section 2
+
+	\item MATLAB Examples \vspcc % Section 3
+
+
+\end{itemize}
+
+}
+
+
+%Section 1: What is What is Looping? 
+\section{What is Looping?}
+
+\subsection{Repeated Code}
+\frame{
+\frametitle{Repeated Code}
+
 	
+	\large 
+
+You may have you noticed in your programs that there was a lot of \PR Repeated Code \K? Is this OK?\vspc
+
 	\begin{itemize}
-	\item \textbf{ \LARGE Have you noticed that in your previous programs\\\\ that there was alot of  \color{mypurple}Repeated Code \color{black}? }\\\\\\
-	
-	\item \textbf{ \LARGE Why is alot of \color{mypurple}Repeated Code \color{black} bad? }\\
-	\begin{itemize}
-	\item \vspace{10mm}
-	\item \vspace{10mm}
-	\item \vspace{10mm}
+		\item 
+		\item \vspace{3mm}
 	\end{itemize}
-	
-	\vspace{10mm}
-			\item \textbf{ \LARGE What can we do about it?  }\vspace{30mm}\\
+	\vspace{3mm}
+
+What can we do about it?  
             			
-            		\item \textbf{ \LARGE Introduce a new \color{blue}Control Structure \color{black} ... }\vspace{30mm}\\
-		\end{itemize}
-\newpage
-
-	\item \textbf{ \LARGE the \color{mypurple}While Loop \color{black}is a \color{blue}Control Structure \color{black} used for\\ repeating code}\\
-\begin{itemize}
-	\item \textbf{ \Large in MATLAB this requires the \color{mypurple} reserved keywords \color{black} \color{blue}while  \color{black} and \color{blue}end \color{black}}\vspace{5mm} \\
+Introduce a new \color{blue}Control Structure \color{black} ... 
+		
+}
+\subsection{A New Control Structure}
+\frame{
+\frametitle{A New Control Structure}
 	
-	\item \textbf{ \Large everything between  \color{black} \color{blue}while  \color{black} and \color{blue}end \color{black} is {\BR repeated} as long as the \color{mybrown} condition \color{black} is true }\vspace{5mm} \\
 
+A loop is a fundamental {\bf control structure} in sequential programming in which one or more commands is executed in repetition controlled by a logical statement or counter. - TH  
+\vspace{5mm}\\
+... In computer programming, a loop is a sequence of instructions that is repeated until a certain condition is reached.  - Web
 
-\item \textbf{ \Large the \color{mybrown} condition \color{black} that controls the loop is a \color{mypurple}Logical Statment} \color{black} \vspace{10mm} \\
-
-\item \textbf{ \Large looping structures can be \color{mypurple} nested \color{black} as well}\vspace{10mm} \\
-
-\end{itemize}
-	\item \textbf{\LARGE  Now we can  \color{mypurple}Design \color{black} more complex \color{blue}Program Flow \color{black}}\\
-
-				\newpage
-				\item \textbf{\LARGE Flowchart Representation}\\\\
-\includegraphics[scale=0.6]{lecture1_fig1.png}\\	
-
-				\item \textbf{\LARGE MATLAB \color{mypurple} syntax \color{black}}\\
-\begin{framed}				
-						 \scalebox{1.1}{{\fontfamily{qcr}\selectfont \color{black}i=1; \color{mygreen}\%Initialize the loop counter\color{black}}} \\\\
-						 \scalebox{1.1}{{\fontfamily{qcr}\selectfont \color{blue}while \color{black} (i<=10) }} \\\\
-						 \hspace*{10mm}\scalebox{1.1}{{\fontfamily{qcr}\selectfont \color{mygreen}\%Do Stuff Here\color{black} }} \\\\
-						 \hspace*{10mm}\scalebox{1.1}{{\fontfamily{qcr}\selectfont \color{black}i=i+1; \color{mygreen}\%Increment the loop counter\color{black} }} \\\\
-						 \scalebox{1.1}{{\fontfamily{qcr}\selectfont \color{blue}end\color{black} }} \\		
-\end{framed}
-			
-				\newpage
-				
-\item \textbf{ \LARGE Introduction to \color{mypurple} Algorithms \color{black}}\\
-{\LARGE
-\begin{itemize}
-	\item ``In mathematics and computer science, an algorithm is a self-contained sequence of actions to be performed. Algorithms perform calculation, data processing, and/or automated reasoning tasks.'' - Wikipedia\vspace{10mm}
-	\item ``A step by step description of a process'' - me\vspace{10mm}
-	\item ``A solution technique for a {\it general problem}'' - me\vspace{10mm}
-	\end{itemize}
-	}
-	\item \textbf{ \LARGE Basic \color{mypurple} Algorithms \color{black} every programmer needs}\\
-	{\LARGE
 	\begin{itemize}
-	\item count \vspace{10mm}
-	\item sum  \vspace{10mm}
-	\item average  \vspace{10mm}
-	\item maximum  \vspace{10mm}
-	\item minimum  \vspace{10mm}
+		\item 
+		\item \vspace{3mm}
 	\end{itemize}
-	}
-				\newpage
-				\item \textbf{ \LARGE \color{mypurple} Counting \color{black}}\\
-	
-				\newpage
-				\item \textbf{ \LARGE \color{mypurple} Summation \color{black} and \color{mypurple} Average \color{black}}\\
-				\newpage
-				\item \textbf{ \LARGE \color{mypurple} Maximum \color{black} and \color{mypurple} Minimum \color{black}}\\
+	\vspace{3mm}
+
+}
+
+\subsection{Why use Loops? }
+\frame{
+\frametitle{Why use Loops? }
+
+
+         \Large Why are loops useful in computer programming? \vspc
+	\large
+	\begin{itemize}
+		\item Reduce problems associated with {it repeated code} \vspc
+		\item \vspace{3mm}
+		\item \vspace{3mm}
+	\end{itemize}
+
+}
+
+%Section 2: Types of Loops
+\section{Types of Loops}
+
+\subsection{Many Different Types}
+\frame{
+\frametitle{Many Different Types}
+
+\large There are many different types of loops in computer programming. This is not an inclusive list.\vspc
+\begin{itemize}
+
+	\item \B WHILE \K loops
+	\item \B FOR \K loops
+	\item {\it nested} loops
+	\item DO... WHILE loops
 \end{itemize}
 
+\large Loops can be characterized as {\it entry-controlled} or {\it exit-controlled} loops.
 
-	
+}
 
+\subsection{The WHILE Loop}
+\frame{
+\frametitle{The WHILE Loop}
+
+ The WHILE Loop is  the simplest loop in computer programming.\vspc
+\begin{itemize}
+
+	\item {\bf block of code} is repeated as long as \textbf{\PR condition} \K is\textbf{ \G true } \K \vspc
+	\item {\it entry-controlled} loop structure \vspc
+	\item \vspace{3mm}
+	\item  \vspace{3mm}
+
+\end{itemize}
+
+}
+
+\subsection{Structure of a WHILE Loop}
+\frame[containsverbatim]{
+\frametitle{Structure of a WHILE Loop}
+
+%It is useful to visualize the structure in a {\bf program flowchart} \vspcc
+%%\begin{multicols}{2}
+%\includegraphics[scale=0.25]{lecture1_fig1.png}\\	
+%
+\begin{framed}
+\begin{lstlisting}
+i=1; %Initialize the Counter
+
+while(i<10)
+
+	% Do Stuff Here
+
+	i=i+1; % Increment the Counter
+
+end	
+\end{lstlisting}
+\end{framed}
+%
+%%\end{multicols}
+}
+
+
+%Section 3: MATLAB Examples
+
+
+% references is not a section for now, for looks and it would be a waste of space
+\frame{
+
+\frametitle{References}
+
+\begin{itemize}
+	\item Your MATLAB textbook - Chapter 5 - Looping Statements
+\end{itemize}
+
+}
 \end{document}
 
 
 
+
+
+
+
+
+
+ 

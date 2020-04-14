@@ -1,0 +1,360 @@
+% Lecture Template for ENGR1120-800 Tristan Hill - Spring 2020
+% Dynamics Modeling and Controls
+% Chapter 5 - Loops
+
+% I am finally converting my stuff to BEAMER
+
+% Document settings
+
+%\documentclass{beamer}                  % for presentation ?
+\documentclass[handout]{beamer}  % for handout ?
+\usepackage{beamerthemesplit}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{framed}
+
+\beamertemplateballitem
+
+\definecolor{TTUpurple}{rgb}{0.3098, 0.1607, 0.5176} % TTU Purple (primary)
+\definecolor{TTUgold}{rgb}{1.0000, 0.8666, 0.0000} % TTU Gold (primary)
+
+\setbeamercolor{palette primary}{bg=TTUpurple,fg=TTUgold}
+\setbeamercolor{palette secondary}{bg=black,fg=TTUgold}
+\setbeamercolor{palette tertiary}{bg=black,fg=TTUpurple}
+\setbeamercolor{palette quaternary}{bg=TTUgold,fg=black}
+\setbeamercolor{structure}{fg=TTUpurple} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=TTUpurple} % TOC sections
+
+%\usefonttheme{professionalfonts}
+\definecolor{mygray}{rgb}{.6, .6, .6}
+
+% [153,50,204] - dark orchid
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+%[139,69,19] - saddle brown
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+\definecolor{mygreen}{rgb}{0,.4,0}
+\definecolor{mygray}{rgb}{.6, .6, .6}
+\definecolor{mypurple}{rgb}{0.6,0.1961,0.8}
+\definecolor{mybrown}{rgb}{0.5451,0.2706,0.0745}
+\definecolor{mygreen}{rgb}{0, .39, 0}
+
+\newcommand{\R}{\color{red}}
+\newcommand{\B}{\color{blue}}
+\newcommand{\BR}{\color{mybrown}}
+\newcommand{\K}{\color{black}}
+\newcommand{\G}{\color{mygreen}}
+\newcommand{\PR}{\color{mypurple}}
+
+
+\newcommand{\CNUM}{5\hspace{2mm}} % Chapter Number 
+\newcommand{\LNUM}{2\hspace{2mm}} % Lecture Number 
+
+\newcommand{\vspcc}{\vspace{6mm}\\ } 
+\newcommand{\vspc}{\vspace{2mm}\\ } 
+\newcommand{\hspc}{\hspace{5mm} } 
+
+\newcommand{\Lagr}{\mathcal{L}} % lagrangian
+
+\newcommand{\secondtitle}{Different Types of Loops}% second line of the title of this presentation , aka the topic of this lecture
+
+\title{Chapter \CNUM - Lecture \LNUM}
+\author{ENGR1120 - 800 - Honors Programming for Engineers} % original formatting from Mike Renfro, September 21, 2004
+
+\date{April 14, 2020}
+
+\begin{document}
+
+\lstset{language=MATLAB,basicstyle=\ttfamily\large,showstringspaces=false}
+
+% Title page1 
+\frame{\titlepage \center\textbf{\secondtitle}\vspcc}
+
+
+% Section 0: Outline
+\frame{
+
+\large \textbf{Lecture \LNUM - \secondtitle} \vspc
+
+ \begin{itemize}
+
+	
+	\item Review and Motivation \vspc  % Section 1
+
+	\item The While Loop \vspc % Section 2
+
+	\item The For Loop  \vspc % Section 3
+
+	\item The Others \vspc % Section 4
+
+
+\end{itemize}
+
+}
+
+
+%Section 1: What is a Data File? 
+\section{Data Files}
+
+\frame{
+\subsection{What is a Data File?}
+\frametitle{What is a Data File?}
+
+
+	\textbf{ \Large What is a \PR Data  File \K? }\vspc
+	
+	\begin{itemize}
+	\item  \large Standard way of organizing data for computer {\bf storage} \vspc
+	
+	\item  \large The data can represent many different things but it is all stored \G digitally\K\vspc
+	
+	\item \large Different \color{mypurple}file types \color{black} are used for different purposes \\
+		\begin{itemize}
+		\item \vspace{2mm}
+		\item \vspace{2mm}
+		\item \vspace{2mm}
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+\subsection{Why use Data  Files? }
+\frametitle{Why use Data  Files? }
+
+
+         \Large Why use \PR Data  Files \K? \vspc
+	\large
+	\begin{itemize}
+		\item Organize large amounts of information\vspc
+		\item Share large amounts of information\vspc
+		\item 
+	\end{itemize}
+
+}
+
+%Section 2: File IO
+\section{File IO}
+
+\subsection{What is File IO?}
+\frame{
+\frametitle{What is File IO?}
+
+\large What is File IO?
+\begin{itemize}
+
+	\item \vspace{5mm} 	
+	\item \vspace{5mm}
+	\item \vspace{5mm}
+
+\end{itemize}
+
+
+}
+
+\subsection{File Input in a Program}
+\frame{
+\frametitle{File Input in a Program}
+
+{\Large File Input in a Program}  \vspc
+
+	\begin{itemize}
+	\item  get data from a file during \color{mypurple}Program Execution \color{black}  \vspc
+	\item data can be stored in a variable(s) to be used by your program  \vspc
+	\end{itemize}
+
+}
+
+%Section 3: .csv Files
+\section{.csv Files}
+
+\subsection{Comma Separated Values}
+
+\frame{
+\frametitle{Comma Separated Values}
+
+\large The individual values in a file are often separated or {\it delimited} by a comma. Other characters are also used such as the space or {\it newline}.
+
+}
+
+\subsection{.csv and MS Excel}
+
+\frame{
+\frametitle{.csv and MS Excel}
+
+{ \large .csv files are compatible with many different software systems}
+
+	\begin{itemize}
+	\item MATLAB
+	\item MS Excel
+	\item ilearn 
+	\end{itemize}
+
+}
+
+%Section 4: File Input in MATLAB
+\section{File Input in MATLAB}
+
+\subsection{The fopen() Function}
+\frame[containsverbatim]{
+\frametitle{The fopen() Function}
+
+{\large Open the file with the {\bf fopen()} function\vspc}
+
+\begin{framed}
+\begin{lstlisting}
+[FID]=fopen(FILENAME,PERMISSION)
+\end{lstlisting}
+\end{framed}
+
+	\begin{itemize}
+
+		\item \underline{Input 1:} FILENAME - the name of the file to open \vspc
+		\item \underline{Input 2:} PERMISSION - direction  of access 'r' or 'w'  \vspc
+		\item \underline{Output 1:} FID -  the file identifier \vspc
+
+	\end{itemize}
+
+}
+
+\frame{
+\frametitle{The File Identifier}
+
+{\Large The {\bf file identifier} (FID) gives important info}\vspc
+\large
+	\begin{itemize}
+ 		\item If the file opens properly the FID will have a positive value\vspace{2mm} \vspc
+	
+		\item The FID will have a negative value if there was an \R error \K  \vspc		\begin{itemize}
+			\item File is not in the proper \color{blue} directory \color{black}  \vspc
+			\item The \color{mypurple} current folder  \color{black} has not been set properly\vspc
+
+			\item Please organize you file structure! \vspc
+		
+		\end{itemize}
+
+		\item \large  FID can also give information about the \color{blue} End Of File\color{black} \vspc
+	
+	% \scalebox{1.3}{{\fontfamily{qcr}\selectfont feof(fid) \color{mygreen} \% returns a boolean }} \vspc
+ 	
+ 	%\textbf{ \large  \color{black} We use this is we do not know how long the file is}\vspc
+	
+	% \scalebox{1.3}{{\fontfamily{qcr}\selectfont \color{blue}while\color{black}($\sim$feof(fid)) \color{mygreen}  }} \vspc
+	\end{itemize}
+
+}
+
+\subsection{The fscanf() Function}
+
+\frame[containsverbatim]{
+\frametitle{The fscanf() Function}
+
+{\Large {\bf fscanf()} can access the data only if the file is open}
+
+\begin{framed}
+\begin{lstlisting}
+[A,COUNT]=fscanf(FID,FORMAT,SIZEA);
+\end{lstlisting}
+\end{framed}
+
+\large
+	\begin{itemize}
+
+		\item \underline{Input 1:} FID - the {\bf file identifier} fid \vspc
+		 \underline{Input 2:} FORMAT - format specification of the scan \vspc
+		 \underline{Input 3:} SIZEA - number of values to be scanned \vspc
+		\item \underline{Output 1:} A -  an array containing the scanned {\bf data} \vspc
+		\underline{Output 2:} COUNT -  the number of elements in {\bf A} \vspc
+
+	\end{itemize}
+
+}
+
+\subsection{The fclose() Function}
+\frame[containsverbatim]{
+\frametitle{The fclose() Function}
+
+{\Large Remember to close the file with {\bf fclose()} } \vspc
+
+
+\begin{framed}
+\begin{lstlisting}
+[ST]=fclose(FID)
+\end{lstlisting}
+\end{framed}
+
+\large
+\begin{itemize}
+
+		\item \underline{Input 1:} FID - the {\bf file identifier} fid \vspc
+		\item \underline{Output 1:} ST -  status of close? \vspc
+
+	\end{itemize}
+\large  
+	\begin{itemize}
+
+ 		\item Close the file after your program accesses the data  \vspc
+		
+		\item THIS IS EASY TO FORGET BUT IMPORTANT!!! \vspc
+
+	\end{itemize}
+
+}
+
+\subsection{A Simple Example}
+
+\frame[containsverbatim]{
+\frametitle{A Simple Example}
+
+\begin{framed}
+\begin{lstlisting}
+FID = fopen('input_data.csv','r');
+
+A = fscanf(FID,'%f')
+
+fclose(FID);
+\end{lstlisting}
+\end{framed}
+}
+
+\subsection{A More Complex Example}
+
+\frame[containsverbatim]{
+\frametitle{A More Complex Example}
+
+
+\begin{framed}
+\begin{lstlisting}
+fid=fopen('lab9_degrees.csv','r');
+
+i=1;
+while ~feof(fid)
+    data(i)=fscanf(fid,'%f,',1);  
+    i=i+1;
+end
+
+fclose(fid);
+\end{lstlisting}
+\end{framed}
+}
+
+% references is not a section for now, for looks and it would be a waste of space
+\frame{
+
+\frametitle{References}
+
+\begin{itemize}
+	\item Your MATLAB textbook - Chapter 5 - Looping Statements
+\end{itemize}
+
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+ 
