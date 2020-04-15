@@ -6,10 +6,12 @@
 \beamer@subsectionintoc {2}{2}{File Input in a Program}{6}{0}{2}
 \beamer@sectionintoc {3}{.csv Files}{7}{0}{3}
 \beamer@subsectionintoc {3}{1}{Comma Separated Values}{7}{0}{3}
-\beamer@subsectionintoc {3}{2}{.csv and MS Excel}{8}{0}{3}
-\beamer@sectionintoc {4}{File Input in MATLAB}{9}{0}{4}
-\beamer@subsectionintoc {4}{1}{The fopen() Function}{9}{0}{4}
-\beamer@subsectionintoc {4}{2}{The fscanf() Function}{11}{0}{4}
-\beamer@subsectionintoc {4}{3}{The fclose() Function}{12}{0}{4}
-\beamer@subsectionintoc {4}{4}{A Simple Example}{13}{0}{4}
-\beamer@subsectionintoc {4}{5}{A More Complex Example}{14}{0}{4}
+\beamer@subsectionintoc {3}{2}{.mat and MATLAB}{8}{0}{3}
+\beamer@subsectionintoc {3}{3}{Universal Filetypes}{9}{0}{3}
+\beamer@sectionintoc {4}{File Input in MATLAB}{10}{0}{4}
+\beamer@subsectionintoc {4}{1}{MATLAB functions for file IO}{10}{0}{4}
+\beamer@subsectionintoc {4}{2}{The fopen() Function}{11}{0}{4}
+\beamer@subsectionintoc {4}{3}{The fscanf() Function}{13}{0}{4}
+\beamer@subsectionintoc {4}{4}{The fclose() Function}{14}{0}{4}
+\beamer@subsectionintoc {4}{5}{A Simple Example}{15}{0}{4}
+\beamer@subsectionintoc {4}{6}{A More Complex Example}{16}{0}{4}

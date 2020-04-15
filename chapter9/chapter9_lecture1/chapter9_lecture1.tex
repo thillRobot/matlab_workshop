@@ -26,6 +26,27 @@
 \setbeamercolor{structure}{fg=TTUpurple} % itemize, enumerate, etc
 \setbeamercolor{section in toc}{fg=TTUpurple} % TOC sections
 
+\hypersetup{
+%    bookmarks=true,         % show bookmarks bar?
+%    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+%    pdftoolbar=true,        % show Acrobat’s toolbar?
+%    pdfmenubar=true,        % show Acrobat’s menu?
+%    pdffitwindow=false,     % window fit to page when opened
+%    pdfstartview={FitH},    % fits the width of the page to the window
+%    pdftitle={My title},    % title
+%    pdfauthor={Author},     % author
+%    pdfsubject={Subject},   % subject of the document
+%    pdfcreator={Creator},   % creator of the document
+%    pdfproducer={Producer}, % producer of the document
+%    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+%    pdfnewwindow=true,      % links in new window
+   % colorlinks=true,       % false: boxed links; true: colored links
+ %   linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+  %  citecolor=green,        % color of links to bibliography
+   % filecolor=magenta,      % color of file links
+  %  urlcolor=blue           % color of external links
+}
+
 %\usefonttheme{professionalfonts}
 \definecolor{mygray}{rgb}{.6, .6, .6}
 
@@ -46,12 +67,16 @@
 \newcommand{\G}{\color{mygreen}}
 \newcommand{\PR}{\color{mypurple}}
 
+\newcommand{\vspccc}{\vspace{6mm}\\} % large vertical space
+\newcommand{\vspcc}{\vspace{4mm}\\}   % medium vertical space
+\newcommand{\vspc}{\vspace{2mm}\\}     % small vertical space
 
+\newcommand{\hspccc}{\hspace{6mm}} % large horizontal space
+\newcommand{\hspcc}{\hspace{4mm}}   % medium horizontal space
+\newcommand{\hspc}{\hspace{2mm}}     % small horizontal space
+
+\newcommand{\CNUM}{9\hspace{2mm}} % Chapter Number 
 \newcommand{\LNUM}{1\hspace{2mm}} % Lecture Number 
-
-\newcommand{\vspcc}{\vspace{6mm}\\ } 
-\newcommand{\vspc}{\vspace{2mm}\\ } 
-\newcommand{\hspc}{\hspace{5mm} } 
 
 \newcommand{\Lagr}{\mathcal{L}} % lagrangian
 
@@ -60,7 +85,7 @@
 \title{Chapter 9 - Lecture \LNUM}
 \author{ENGR1120 - 800 - Honors Programming for Engineers} % original formatting from Mike Renfro, September 21, 2004
 
-\date{April 08, 2020}
+\date{April 14, 2020}
 
 \begin{document}
 
@@ -110,7 +135,7 @@
 		\begin{itemize}
 		\item \vspace{2mm}
 		\item \vspace{2mm}
-		\item \vspace{2mm}
+		\item \href{https://en.wikipedia.org/wiki/List_of_file_formats}{list of all...}\vspace{2mm}
 		\end{itemize}
 	\end{itemize}
 }
@@ -170,27 +195,77 @@
 \frame{
 \frametitle{Comma Separated Values}
 
-\large The individual values in a file are often separated or {\it delimited} by a comma. Other characters are also used such as the space or {\it newline}.
+
+
+\large The individual values in a file are often separated or {\it delimited} by a comma. Other characters are also used such as the space or {\it newline}. \vspc
+A .txt file with values delimited by commas is called a comma separared value file or {\bf .csv} file. \vspccc
+
+\small
+Traditionally the {\it end of file} was marked by a special character as well but modern data files are organized by file size and do not require an end of file character. \vspccc
 
 }
 
-\subsection{.csv and MS Excel}
+
+
+\subsection{.mat and MATLAB}
 
 \frame{
-\frametitle{.csv and MS Excel}
+\frametitle{.mat and MATLAB}
 
-{ \large .csv files are compatible with many different software systems}
+{ \large {\bf .mat} files are compatible with MATLAB only}
 
 	\begin{itemize}
-	\item MATLAB
-	\item MS Excel
-	\item ilearn 
-	\end{itemize}
+	\item save() - saves the workspace to a {\bf .mat} file \vspc
+	\item load() - loads a {\bf .mat} file into workspace    \vspc
+	\item this is useful if you want to be stuck in MATLAB... \vspc
+	\item a {\it universal} filetype is a good idea for data storage\vspace{5mm}
+	\end{itemize} 
 
 }
+
+\subsection{Universal Filetypes}
+
+\frame{
+\frametitle{Universal Filetypes}
+
+Standard file formats are compatible with many software systems. \vspace{5mm}\\
+ 	\def\arraystretch{1.25}%  
+	\setlength{\tabcolsep}{1.25em} % for the horizontal padding
+	\begin{tabular}{|c|c|}\hline
+	Software&File Type\\\hline
+	C++& .txt \\
+	MATLAB & .mat .dat\\
+	Python& .csv \\
+	MS Excel& .xlsx \\
+	ilearn & .pdf .docx\\
+	Solidworks& .sldprt .stl \\ \hline
+	\end{tabular}
+Some don't play well with others.
+}
+
 
 %Section 4: File Input in MATLAB
 \section{File Input in MATLAB}
+
+\subsection{MATLAB functions for file IO}
+\frame[containsverbatim]{
+\frametitle{MATLAB functions for file IO}
+
+{\large There are different ways to get data from a file. We are going to {\bf scan} the data one character at a time using these functions.}
+
+\begin{framed}
+\begin{lstlisting}
+fopen()  
+
+fscanf()
+
+fclose()
+\end{lstlisting}
+\end{framed}
+
+	
+
+}
 
 \subsection{The fopen() Function}
 \frame[containsverbatim]{
