@@ -1,0 +1,73 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Data Files}{3}{Data Files}{0}}
+\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{What is a Data File?}}
+\headcommand {\slideentry {1}{1}{0}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{Why use Data Files? }}
+\headcommand {\slideentry {1}{2}{0}{4/4}{}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@sectionpages {3}{4}}
+\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\sectionentry {2}{File IO}{5}{File IO}{0}}
+\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{What is File IO?}}
+\headcommand {\slideentry {2}{1}{1}{5/5}{What is File IO?}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{6}{File Output to a Program}}
+\headcommand {\slideentry {2}{2}{1}{6/6}{File Output to a Program}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@sectionpages {5}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\sectionentry {3}{.csv Files}{7}{.csv Files}{0}}
+\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{7}{Comma Separated Values}}
+\headcommand {\slideentry {3}{1}{1}{7/7}{Comma Separated Values}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@sectionpages {7}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\sectionentry {4}{File Input in MATLAB}{8}{File Input in MATLAB}{0}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{8}{MATLAB functions for file IO}}
+\headcommand {\slideentry {4}{1}{1}{8/8}{MATLAB functions for file IO}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{9}{The fopen() Function}}
+\headcommand {\slideentry {4}{2}{1}{9/9}{The fopen() Function}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {4}{2}{2}{10/10}{The fopen() Function}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionpages {9}{10}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{11}{The fprintf() Function}}
+\headcommand {\slideentry {4}{3}{1}{11/11}{The fprintf() Function}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{12}{The fclose() Function}}
+\headcommand {\slideentry {4}{4}{1}{12/12}{The fclose() Function}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{13}{A Simple Example}}
+\headcommand {\slideentry {4}{5}{1}{13/13}{A Simple Example}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{4}{6}{14}{A More Complex Example}}
+\headcommand {\slideentry {4}{6}{1}{14/14}{A More Complex Example}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\beamer@subsectionentry {0}{4}{7}{15}{A More Complex Example Continued}}
+\headcommand {\slideentry {4}{7}{1}{15/15}{A More Complex Example Continued}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {4}{7}{2}{16/16}{A More Complex Example Continued}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@partpages {1}{16}}
+\headcommand {\beamer@subsectionpages {15}{16}}
+\headcommand {\beamer@sectionpages {8}{16}}
+\headcommand {\beamer@documentpages {16}}
+\headcommand {\gdef \inserttotalframenumber {16}}
