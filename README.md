@@ -12,8 +12,8 @@ Tennessee Tech has provided a lisence to install MATLAB, free of charge, on your
 - __Installation Instructions__: [Install Mathworks MATLAB](https://services.tntech.edu/TDClient/1878/Portal/KB/ArticleDet?ID=112045) for the  from TNTECH ITS.
 
 - __Alternative Options__: 
- - MATLAB Online: If you have a Chromebook or other unsupported system, you can use [MATLAB Online](https://www.mathworks.com/products/matlab-online.html). 
- - GNU Octave: If you do not have space for the MATLAB application or you prefer to use an open source option, you can use [GNU Octave](https://www.gnu.org/software/octave/index), a clone of MATLAB.
+ 	- MATLAB Online: If you have a Chromebook or other unsupported system, you can use [MATLAB Online](https://www.mathworks.com/products/matlab-online.html). 
+ 	- GNU Octave: If you do not have space for the MATLAB application or you prefer to use an open source option, you can use [GNU Octave](https://www.gnu.org/software/octave/index), a clone of MATLAB.
 
 ## Lecture Material
 The course notes and presentation slides can be found in the [`lecture/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lecture) directory. Check for updates regularly. If you would prefer printed handouts, contact the instructor.
