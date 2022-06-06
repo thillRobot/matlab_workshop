@@ -1,5 +1,6 @@
-## GSET Summer 2022
-This is the main page for Governors School for Emerging Technologies at Tennessee Technological University summer 2022. If you are not in GSET, go back to [`branch: master`](https://github.com/thillRobot/matlab_workshop/tree/master).
+# GSET Summer 2022
+This is the main page for Governors School for Emerging Technologies at Tennessee Technological University summer 2022. 
+If you are not in GSET, go back to [`branch: master`](https://github.com/thillRobot/matlab_workshop/tree/master).
 
 ## MATLAB Installation 
 Tennessee Tech has provided a lisence to install MATLAB, free of charge, on your personal computer. This requires a valid tntech.edu email address for regristration.  
@@ -12,4 +13,7 @@ Installation Instructions: [Install Mathworks MATLAB](https://services.tntech.ed
 
 Alternative Options: 
  - MATLAB Online: If you have a Chromebook or other unsupported system, you can use [MATLAB Online](https://www.mathworks.com/products/matlab-online.html). 
- - GNU Octave: If you do not have space for the MATLAB application or you prefer to use an open source option, you can use [GNU Octave](https://www.gnu.org/software/octave/index), a clone of MATLAB.  
+ - GNU Octave: If you do not have space for the MATLAB application or you prefer to use an open source option, you can use [GNU Octave](https://www.gnu.org/software/octave/index), a clone of MATLAB.
+
+## Lecture Slides
+The course notes and presentation slides can be found in the [`lecture/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lecture) directory. Check for updates regularly. If you would prefer printed handouts, contact the instructor.
