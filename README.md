@@ -17,3 +17,6 @@ Tennessee Tech has provided a lisence to install MATLAB, free of charge, on your
 
 ## Lecture Material
 The course notes and presentation slides can be found in the [`lecture/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lecture) directory. Check for updates regularly. If you would prefer printed handouts, contact the instructor.
+
+## Laboratory Asssignments
+The exercises to be completed in the laboratory sessions can be found in the [`lab/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lab) directory.  
