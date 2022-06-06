@@ -1,8 +1,5 @@
-# matlab_workshop
-This is a collection of lectures and exercises for ENGR1120, Programming for Engineers (with MATLAB).
-
 ## GSET Summer 2022
-This is the main page for Governors School for Emerging Technologies at Tennessee Technological University summer 2022.
+This is the main page for Governors School for Emerging Technologies at Tennessee Technological University summer 2022. If you are not in GSET, go back to [`branch: master`](https://github.com/thillRobot/matlab_workshop/tree/master).
 
 ## MATLAB Installation 
 Tennessee Tech has provided a lisence to install MATLAB, free of charge, on your personal computer. This requires a valid tntech.edu email address for regristration.  
