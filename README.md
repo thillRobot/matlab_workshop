@@ -23,4 +23,4 @@ The exercises to be completed in the laboratory sessions can be found in the [`l
 
 ## Projects
 
-The peoject can be found in the [`project/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lab](https://github.com/thillRobot/matlab_workshop/tree/gset/project) directory.  
+The peoject can be found in the [`project/`](https://github.com/thillRobot/matlab_workshop/tree/gset/project) directory.  
