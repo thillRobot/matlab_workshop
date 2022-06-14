@@ -16,7 +16,7 @@ Tennessee Tech has provided a lisence to install MATLAB, free of charge, on your
  	- GNU Octave: If you do not have space for the MATLAB application or you prefer to use an open source option, you can use [GNU Octave](https://www.gnu.org/software/octave/index), a clone of MATLAB.
 
 ## Lecture Material
-The course notes and presentation slides can be found in the [`lecture/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lecture) directory. Check for updates regularly. If you would prefer printed handouts, contact the instructor.
+The course notes and presentation slides can be found in the [`lecture/`](https://github.com/thillRobot/matlab_workshop/tree/gset/lecture) directory. Check for updates regularly. If you would prefer printed handouts, contact the instructor.
 
 ## Laboratory Asssignments
-The exercises to be completed in the laboratory sessions can be found in the [`lab/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lab) directory.  
+The exercises to be completed in the laboratory sessions can be found in the [`lab/`](https://github.com/thillRobot/matlab_workshop/tree/gset/lab) directory.  
