@@ -20,3 +20,7 @@ The course notes and presentation slides can be found in the [`lecture/`](https:
 
 ## Laboratory Asssignments
 The exercises to be completed in the laboratory sessions can be found in the [`lab/`](https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lab) directory.  
+
+## Projects
+
+The peoject can be found in the [`project/`]([https://github.com/thillRobot/matlab_workshop/tree/gset-devel/lab](https://github.com/thillRobot/matlab_workshop/tree/gset/project)) directory.  
