@@ -17,14 +17,8 @@ The Robot is placed in an environment with obstacles in it and the robot's goal 
 The MATLAB code behind the Robot Simulator is complex. However, most of it has been written for you. You will be asked to modify the portion which describes the robots reactive behaviors. Also you will be asked to make a few changes to the simulator code structure. The code can be found on Github [here](https://github.com/thillRobot/robo_sim). Click the *code* button and download the entire package. Make sure to extract the compressed folder _before_ you run or modify it. Stay tuned for updates and revisions of the simulator.
 
 ## The Assignment:
-Teach the robot {\it at least} 5 independent reactive behaviors. These can be as simple or as complex as you would like. The possibilities are endless. Keep in mind you are want to escape quickly but not crash. In version 1.2 the behaviors are currently programmed in the file 'robot\_decide.m'. \\\\
+Teach the robot _at least_ 5 independent reactive behaviors. These can be as simple or as complex as you would like. The possibilities are endless. Keep in mind you are want to escape quickly but not crash. In version 1.2 the behaviors are currently programmed in the function file `robot_decide.m
 		
-			Stay Tuned for More...
-		
-
-			
-
-
 
 
 Click [here](https://github.com/thillRobot/matlab_workshop/blob/gset/project/robo_sim_project/robo_sim_project.pdf) for the instructions as a PDF.
