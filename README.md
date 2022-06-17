@@ -23,5 +23,5 @@ The exercises to be completed in the laboratory sessions can be found in the [`l
 
 ## Projects
 
-The project can be found in the [`project/`](https://github.com/thillRobot/matlab_workshop/tree/gset/project) directory.  
+The projects can be found in the [`project/`](https://github.com/thillRobot/matlab_workshop/tree/gset/project) directory.  
 
