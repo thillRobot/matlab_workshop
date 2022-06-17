@@ -21,9 +21,6 @@ The MATLAB code behind the Robot Simulator is complex. However, most of it has b
 Teach the robot _at least_ 5 independent reactive behaviors. These can be as simple or as complex as you would like. The possibilities are endless. Keep in mind you are want to escape quickly but not crash. In version 1.2 the behaviors are currently programmed in the function file `robot_decide.m
 		
 
-
 Click [here](https://github.com/thillRobot/matlab_workshop/blob/gset/project/robo_sim_project/robo_sim_project.pdf) for the instructions as a PDF.
-
-Click [here](https://github.com/thillRobot/robo_sim/releases/tag/v2.0) to download the code you will need to start with. Then, find the code button and download the entire package.
 
 
