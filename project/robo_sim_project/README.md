@@ -14,8 +14,7 @@ The robot experiences the environment through a sensor called a *laser ranger*. 
 The Robot is placed in an environment with obstacles in it and the robot's goal is to escape the arena (shown as a box). However, if you crash into any objects, your robot will be destroyed. In the current version you are given the option to use a hardcoded map, or create a map using the {\it ginput()} function.
 			
 ## The Code
-The MATLAB code behind the Robot Simulator is complex. However, most of it has been written for you. You will be asked to modify the portion which describes the robots reactive behaviors. Also you will be asked to make a few changes to the simulator code structure. The code can be found on Github 
-[here](https://github.com/thillRobot/robo_sim/releases/tag/v2.0). Download the _.zip_ folder and extract it the compressed folder _before_ you run or modify it. Stay tuned for updates and revisions of the simulator.
+The MATLAB code behind the Robot Simulator is complex. However, most of it has been written for you. You will be asked to modify the portion which describes the robots reactive behaviors. Also you will be asked to make a few changes to the simulator code structure. [Download robo_sim v2.0](https://github.com/thillRobot/robo_sim/archive/refs/tags/v2.0.zip) from Github and extract ithe compressed (_.zip_) folder before you run or modify it. Stay tuned for updates and revisions of the simulator.
 
 ## The Assignment:
 Teach the robot _at least_ 5 independent reactive behaviors. These can be as simple or as complex as you would like. The possibilities are endless. Keep in mind you are want to escape quickly but not crash. In version 1.2 the behaviors are currently programmed in the function file `robot_decide.m
