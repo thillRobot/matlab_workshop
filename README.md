@@ -2,6 +2,9 @@
 This is the main page for Governors School for Emerging Technologies at Tennessee Technological University summer 2022. 
 If you are not in GSET, go back to [`branch: master`](https://github.com/thillRobot/matlab_workshop/tree/master).
 
+## Woop Woop
+Markdown is awesome!
+
 ## MATLAB Installation 
 Tennessee Tech has provided a lisence to install MATLAB, free of charge, on your personal computer. This requires a valid tntech.edu email address for regristration.  
 
