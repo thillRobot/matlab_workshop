@@ -23,6 +23,6 @@ Teach the robot _at least_ 5 independent reactive behaviors. These can be as sim
 
 Click [here](https://github.com/thillRobot/matlab_workshop/blob/gset/project/robo_sim_project/robo_sim_project.pdf) for the instructions as a PDF.
 
-Click [here](https://github.com/thillRobot/robo_sim/releases/tag/v2.0) to download the code you will need to start with. Then, find the code button and download the entire package.
+Click [here](https://github.com/thillRobot/robo_sim/releases/tag/v2.0/download/robo_sim.zip) to download the code you will need to start with. Then, find the code button and download the entire package.
 
 
