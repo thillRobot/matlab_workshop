@@ -28,3 +28,6 @@ The exercises to be completed in the laboratory sessions can be found in the [`l
 
 The projects can be found in the [`project/`](https://github.com/thillRobot/matlab_workshop/tree/gset/project) directory.  
 
+## Virtual Teams Meeting
+
+You can join class on Teams [here](https://teams.microsoft.com/l/meetup-join/19:d57cd83424f94b3f8c901d16e116b12f@thread.tacv2/1655818351086?context=%7B%22Tid%22:%2266fecaf8-3dc0-4d2c-b8b8-eff0ddea46f0%22,%22Oid%22:%2244bfbd01-48aa-4fb1-8635-b795aa3fe70c%22%7D). Stay tuned for details about recordings.
