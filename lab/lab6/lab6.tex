@@ -1,0 +1,182 @@
+
+% Homework 2 for ENGR 1120 030 031 E01 - Tristan Hill - Spring 2017 - summer17
+% Introduction to MATLAB 
+%
+% Basic Use of 1D Arrays
+% plot and the Figure Window
+% trigonometric functions 
+ 
+% Document settings
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{color,soul}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage{multicol}
+\usepackage{gensymb}
+
+\pagestyle{plain}
+\setlength\parindent{0pt}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+% assignment number 
+
+% assignment number 
+\newcommand{\NUM}{3} 
+\newcommand{\VSpaceSize}{2mm} 
+\newcommand{\HSpaceSize}{2mm} 
+
+\newcommand{\secNum}{GSET: Programming}
+\newcommand{\assnType}{Lab}
+\newcommand{\assnTitle}{If Else Elseif}
+\newcommand{\assnNum}{6} 
+\newcommand{\currTerm}{Summer 2022}
+
+\definecolor{mygray}{rgb}{.6, .6, .6}
+
+\setulcolor{red} 
+\setstcolor{green} 
+\sethlcolor{mygray} 
+
+\begin{document}
+
+
+	\textbf{\LARGE ENGR \hspace{2mm}\secNum \hspace{3mm} \currTerm} \\\\
+	\textbf{\LARGE \assnType \hspace{1mm}  \assnNum : \assnTitle}
+    
+    \Large
+	\begin{description}
+		
+		\item [\textbf{Overview}]\textbf{:} \\ 
+        
+            Every engineer needs a good understanding of Trigonometry. In this exercise you are going to use the trigonometry tools that are built into MATLAB to solve a simple geometry problem.
+        
+        \item [\textbf{Area of a Polygon}]\textbf{:} \\
+        
+            You will be calculating the side length and area of a triangle and a quadrilateral (4 sided polygon). You have been given several formulas on the next page. \\
+        
+        
+\item [\textbf{Trigonometric Functions in MATLAB }]\textbf{:}\\\\ All of the trigonometric functions that you may remember and need are included in the {\it built in functions} library (this is not a complete list) . The default units for angle in MATLAB are {\it radians}.   
+
+    \begin{itemize}             
+        \begin{multicols}{2}
+        
+        \item sin() - sine
+        \item cos() - cosine
+        \item tan() - tangent
+        
+        \item asin() - inverse aka arc-sine  
+        \item acos() - inverse aka arc-cosine
+        \item atan() - inverse aka arc-tangent
+        
+        \end{multicols}
+    \end{itemize}
+ \vspace{20mm}
+\item [\textbf{Array Functions in MATLAB }]\textbf{:}\\\\ Remember that there are many functions designed to be used with arrays (this is not a complete list).  
+
+    \begin{itemize}             
+        \begin{multicols}{2}
+        
+        \item max() - largerst element
+        \item min() - smallest element
+        \item mean() - average of all elements
+        
+        \item length() - number of elements  
+        \item size() - dimensions of the matrix 
+        \item sum() - sum of all elements 
+        
+        \end{multicols}
+    \end{itemize}
+ \newpage
+\item [\textbf{Equations that you will need }]\textbf{:} \\
+    \begin{itemize}             
+        
+        \item {\bf Distance Formula:} \scalebox{1}{$D_{ij}=\sqrt{(x_i-x_j)^2+(y_i-y_j)^2}$} \\
+        
+        \item {\bf Herons Formula(Area):} \scalebox{1}{$A=\sqrt{s(s-a)(s-b)(s-c)}$} \vspace{2mm}\\
+        \item {\bf Perimeter Formula:} \scalebox{1}{$p = a+b+c$ and $s=p/2$} \vspace{2mm}\\
+        \item {\bf Law of Cosines:} \includegraphics[scale=.5]{hw2_fig1.png} \\
+        
+        \scalebox{1}{$a^2 = b^2+c^2-2bc\times\cos(A)$} \vspace{2mm}\\
+        \scalebox{1}{$b^2 = a^2+c^2-2ac\times\cos(B)$} \vspace{2mm}\\
+        \scalebox{1}{$c^2 = a^2+b^2-2ab\times\cos(C)$} \vspace{2mm}\\    
+        
+        
+        
+        
+
+    \end{itemize}
+ \vspace{20mm}
+ 
+\newpage
+\item [\textbf{Assignment}]\textbf{:} You are required to write a program to complete the problem described below.
+			\begin{description}
+			\item[Part 1]\textbf{: Triangle}
+			\begin{enumerate}
+				\item Ask the user to enter the 3 vertices of a triangle using the {\it input()} function. The data should be stored into 2 separate arrays, 1 array for x data and 1 array for y data.  \\
+		\item Show the triangle using the plot function. \\
+                \item Calculate the length of each side of the triangle. Show these results in the command window with {\it fprintf()}. \\
+		\item Calculate each of the internal angles of the triangle. Show these results in the command window  with {\it fprintf()}. \\  
+			\item Calculate the area of the triangle. Show this result in the command window  with {\it fprintf()}. \\  
+			\item Use one or more if statements to determine what type of triangle is formed by the three points. There are six categories shown below. Your program should print category to the command window. \\
+\begin{itemize}
+\item Equilateral
+\item Right
+\item Isosceles
+\item Scalene
+\item Acute 
+\item Obtuse
+\end{itemize}
+			\end{enumerate}
+%			\item[Part 2]\textbf{: Quadrilateral}
+%			\begin{enumerate}
+%				\item Ask the user to enter the 4 vertices of a quadrilateral using the {\it input()} function. The data should be stored into 2 separate arrays, 1 array for x data and 1 array for y data.  \\
+%\item Show the quadrilateral using the plot function. \\
+%                \item Calculate the length of each side of the shape. Also, calculate the length of 1 or both of the {\it diagonals}. Show these results in the command window with {\it fprintf()}. \\
+%		\item Calculate each of the internal angles of the quadrilateral. Show these results in the command window  with {\it fprintf()}.  \\
+%			\item Calculate the area of the quadrilateral. Show this result in the command window  with {\it fprintf()}. \\  
+%	
+%			\end{enumerate}
+	
+			\end{description}
+			
+	\newpage
+\item [\textbf{Submission }]\textbf{:} \\
+			\begin{itemize}
+				\item Your program needs a proper {\it Header} or title block on it (name, date, etc.). Please see this discussion in the notes for details.\\
+				%\item Submit only 1 script for this assignment. It should include part 1, part 2 together.\\
+				\item Your script file needs to be named properly. Please see the {\it naming convention} document on ilearn. \\
+				\item Submit your file on ilearn in the {\it Project \assnNum Assignments Folder}. You can resubmit as many times as you would like but please wait at least 2 minute between submissions. Your latest submission will be the only one graded.\\
+
+			\end{itemize}
+   	
+    	\end{description}
+ 
+\end{document}
+
+
+
